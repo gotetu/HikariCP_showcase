@@ -5,6 +5,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -31,6 +32,10 @@ public class HikariCPDataSource {
     public static Connection getConnection() throws SQLException {
         logger.debug("Get database connection.");
         return hikariDataSource.getConnection();
+    }
+
+    public static DataSource getDataSource() {
+        return hikariDataSource;
     }
 
 }
