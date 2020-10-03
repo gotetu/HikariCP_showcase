@@ -28,7 +28,7 @@ public class MybatisFactory {
      * @param mapperClass マッパークラス
      * @return SqlSessionFactory
      */
-    SqlSessionFactory buildSqlSessionFactory(Class<?> mapperClass) {
+    public SqlSessionFactory buildSqlSessionFactory(Class<?> mapperClass) {
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
         Environment environment = new Environment("development", transactionFactory, dataSource);
         Configuration configuration = new Configuration(environment);
