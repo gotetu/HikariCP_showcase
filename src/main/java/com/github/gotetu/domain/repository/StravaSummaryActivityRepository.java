@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Mapper
 public interface StravaSummaryActivityRepository {
-    @Select("SELECT * FROM straca_summary_activity")
+    @Select("SELECT * FROM strava_summary_activity")
     List<StravaSummaryActivityModel> findAll();
 
     @Select("SELECT * FROM strava_summary_activity where id = #{id}")
